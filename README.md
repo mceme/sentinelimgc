@@ -1,14 +1,14 @@
-# Imagecoin Sentinel
+# Imagecash Sentinel
 
-An all-powerful toolset for Imagecoin.
+An all-powerful toolset for Imagecash.
 
 [![Build Status](https://travis-ci.org/dashpay/sentinel.svg?branch=master)](https://travis-ci.org/dashpay/sentinel)
 
-Sentinel is an autonomous agent for persisting, processing and automating Imagecoin V16.1 governance objects and tasks, and for expanded functions in the upcoming Imagecoin.
+Sentinel is an autonomous agent for persisting, processing and automating Imagecash V13.1 governance objects and tasks, and for expanded functions in the upcoming Imagecoin.
 
-Sentinel is implemented as a Python application that binds to a local version 130102 ImageCoind instance on each ImageCoin 130102 Masternode.
+Sentinel is implemented as a Python application that binds to a local version 130102 imgcashd instance on each Imagecash 130102 Masternode.
 
-This guide covers installing Sentinel onto an existing 16.1 Masternode in Ubuntu 16.04 / 18.04.
+This guide covers installing Sentinel onto an existing 13.1 Masternode in Ubuntu 16.04 / 18.04.
 
 ## Installation
 
@@ -31,7 +31,7 @@ Make sure the local ImageCoin daemon running is at least version 130102 (130102)
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/mceme/sentinel.git && cd sentinel
+    $ git clone https://github.com/mceme/sentinelimgc.git && cd sentinelimgc
     $ python -m compileall .
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
@@ -42,9 +42,9 @@ Set up a crontab entry to call Sentinel every minute:
 
     $ crontab -e
 
-In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/sentinel' to the path where you cloned sentinel to:
+In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/sentinelimgc' to the path where you cloned sentinel to:
 
-    * * * * * cd /home/YOURUSERNAME/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
+    * * * * * cd /home/YOURUSERNAME/sentinelimgc && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
 
 ### 4. Test the Configuration
 
@@ -56,9 +56,9 @@ With all tests passing and crontab setup, Sentinel will stay in sync with ImageC
 
 ## Configuration
 
-An alternative (non-default) path to the `imagecoin.conf` file can be specified in `sentinel.conf`:
+An alternative (non-default) path to the `imgcash.conf` file can be specified in `sentinel.conf`:
 
-    imagecoin_conf=/path/to/imagecoin.conf
+    imagecoin_conf=/path/to/imgcash.conf
 
 ## Troubleshooting
 
