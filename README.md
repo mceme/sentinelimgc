@@ -4,7 +4,7 @@ An all-powerful toolset for Imagecash.
 
 [![Build Status](https://travis-ci.org/dashpay/sentinel.svg?branch=master)](https://travis-ci.org/dashpay/sentinel)
 
-Sentinel is an autonomous agent for persisting, processing and automating Imagecash V13.1 governance objects and tasks, and for expanded functions in the upcoming Imagecoin.
+Sentinel is an autonomous agent for persisting, processing and automating Imagecash V13.1 governance objects and tasks, and for expanded functions in the upcoming Imagecash.
 
 Sentinel is implemented as a Python application that binds to a local version 130102 imgcashd instance on each Imagecash 130102 Masternode.
 
@@ -52,7 +52,7 @@ Test the config by runnings all tests from the sentinel folder you cloned into
 
     $ ./venv/bin/py.test ./test
 
-With all tests passing and crontab setup, Sentinel will stay in sync with ImageCoind and the installation is complete
+With all tests passing and crontab setup, Sentinel will stay in sync with imgcashd and the installation is complete
 
 ## Configuration
 
@@ -86,4 +86,4 @@ Specifically:
 
 ### License
 
-Released under the MIT license, under the same terms as Imagecoin Core itself. See [LICENSE](LICENSE) for more info.
+Released under the MIT license, under the same terms as Imagecash Core itself. See [LICENSE](LICENSE) for more info.
