@@ -23,9 +23,9 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local ImageCoin daemon running is at least version 130102 (130102)
+Make sure the local Imagecash daemon running is at least version 130102 (130102)
 
-    $ ImageCoin-cli getinfo | grep version
+    $ Imagecash-cli getinfo | grep version
 
 ### 2. Install Sentinel
 
