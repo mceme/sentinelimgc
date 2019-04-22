@@ -3,7 +3,7 @@
 """
 import sys
 import os
-from img_config import ImageCoinConfig
+from imgc_config import imgcashConfig
 
 default_sentinel_config = os.path.normpath(
     os.path.join(os.path.dirname(__file__), '../sentinel.conf')
@@ -13,7 +13,7 @@ default_sentinel_config = os.path.normpath(
 debug_enabled = os.environ.get('SENTINEL_DEBUG', False)
 
 sentinel_config_file = os.environ.get('SENTINEL_CONFIG', default_sentinel_config)
-sentinel_cfg = ImageCoinConfig.tokenize(sentinel_config_file)
+sentinel_cfg = imgcashConfig.tokenize(sentinel_config_file)
 sentinel_version = "1.1.0"
 min_dashd_proto_version_with_sentinel_ping = 70207
 
@@ -29,16 +29,16 @@ def get_dash_conf():
 
     return dash_conf
 
-def get_imagecoin_conf():
+def get_imgcash_conf():
     home = os.environ.get('HOME')
 
-    imagecoin_conf = os.path.join(home, ".imagecoincore/imagecoin.conf")
+    imgcash_conf = os.path.join(home, ".imgcashcore/imgcash.conf")
     if sys.platform == 'darwin':
-        imagecoin_conf = os.path.join(home, "Library/Application Support/ImageCoin/imagecoin.conf")
+        imgcash_conf = os.path.join(home, "Library/Application Support/imgcash/imgcash_conf")
 
-    imagecoin_conf = sentinel_cfg.get('imagecoin_conf', imagecoin_conf)
+    imgcash_conf = sentinel_cfg.get('imgcash_conf', imgcash_conf)
 
-    return imagecoin_conf
+    return imgcash_conf
     
 def get_sibcoin_conf():
     home = os.environ.get('HOME')

@@ -76,23 +76,23 @@ def has_sibcoin_conf():
 
     return valid_sibcoin_conf
     
-def has_imagecoin_conf():
+def has_imgcash_conf():
     import config
     import io
 
-    valid_imagecoin_conf = False
+    valid_imgcash_conf = False
 
     # ensure dash_conf exists & readable
     #
     # if not, print a message stating that Dash Core must be installed and
     # configured, including JSONRPC access in dash.conf
     try:
-        f = io.open(config.imagecoin_conf)
-        valid_imagecoin_conf = True
+        f = io.open(config.imgcash_conf)
+        valid_imgcash_conf = True
     except IOError as e:
         print(e)
 
-    return valid_imagecoin_conf
+    return valid_imgcash_conf
 
 def process_args():
 
@@ -135,10 +135,10 @@ def main():
 
     initmodule.options = options
 
-    from img_config import ImageCoinConfig
-    config.sentinel_cfg = ImageCoinConfig.tokenize(config.sentinel_config_file)
+    from imgc_config import imgcashConfig
+    config.sentinel_cfg = imgcashConfig.tokenize(config.sentinel_config_file)
 
-    config.imagecoin_conf = config.get_imagecoin_conf()
+    config.imgcash_conf = config.get_imgcash_conf()
     config.network = config.get_network()
     config.db = config.get_db_conn()
 
@@ -157,8 +157,8 @@ def main():
         print("Please ensure correct database configuration.")
         sys.exit(1)
 
-    if not has_imagecoin_conf():
-        print("Imagecoin Core must be installed and configured, including JSONRPC access in imagecoin.conf")
+    if not has_imgcash_conf():
+        print("Imgcash Core must be installed and configured, including JSONRPC access in imgcash.conf")
         sys.exit(1)
 
 
