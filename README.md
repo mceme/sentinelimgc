@@ -58,7 +58,7 @@ With all tests passing and crontab setup, Sentinel will stay in sync with imgcas
 
 An alternative (non-default) path to the `imgcash.conf` file can be specified in `sentinel.conf`:
 
-    imagecoin_conf=/path/to/imgcash.conf
+    imgcash_conf=/path/to/imgcash.conf
 
 ## Troubleshooting
 
