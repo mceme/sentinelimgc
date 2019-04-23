@@ -19,7 +19,7 @@ class imgcashConfig(DashConfig):
         creds = {key: value for (key, value) in match}
 
         # standard Dash defaults...
-        default_port = 6888 if (network == 'mainnet') else 11944
+        default_port = 6898 if (network == 'mainnet') else 11944
 
         # use default port for network if not specified in dash.conf
         if not ('port' in creds):
