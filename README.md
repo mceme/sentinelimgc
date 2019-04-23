@@ -25,7 +25,7 @@ Update system packages and ensure virtualenv is installed:
 
 Make sure the local Imagecash daemon running is at least version 130102 (130102)
 
-    $ Imagecash-cli getinfo | grep version
+    $ imgcash-cli getinfo | grep version
 
 ### 2. Install Sentinel
 
